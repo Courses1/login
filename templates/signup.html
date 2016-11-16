@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <style type="text/css">
+      .label {text-align: right}
+      .error {color: red}
+    </style>
+</head>
+<body>
+    <h2> Signup Form </h2>
+    <form action="/" method="post">
+        <table>
+            <tr>
+                <td class="label"> Enter Username </td>
+                <td> <input type="text" name="username" value = "{{ form_data.username }}">  </td>
+                <td class = "error"> {{ error.username_error }} </td>
+            </tr>
+
+            <tr>
+                <td class="label"> Enter Password </td>
+                <td> <input type="password" name="password"> </td>
+                <td class = "error">  {{ error.password_error }} </td>
+            </tr>
+
+            <tr>
+                <td class="label"> Verify Password </td>
+                <td> <input type="password" name="verify"> </td>
+                <td class = "error">  {{ error.password_match_error }}</td>
+            </tr>
+
+            <tr>
+                <td class="label"> Email (Optional) </td>
+                <td> <input type="text" name="email" value = "{{ form_data.email }}" > </td>
+                <td class = "error"> {{ error.email_error }} </td>
+            </tr>
+        </table>
+
+        <br>
+        <button type="submit"> Signup</button>
+    </form>
+</body>
+</html>
