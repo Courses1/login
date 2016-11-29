@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <title>Login</title>
+</head>
+<body>
+<form method="post">
+        <h2> Login: </h2>
+        <table>
+            <tr>
+                <td class="label"> Enter Username </td>
+                <td> <input type="text" name="username" value = "{{ username }}">  </td>
+            </tr>
+
+            <tr>
+                <td class="label"> Enter Password </td>
+                <td> <input type="password" name="password"> </td>
+            </tr>
+
+        </table>
+        <br>
+        <div class="error">{{ error }} </div>
+        <button type="submit">  Login </button>
+    </form>
+
+</body>
+</html>
